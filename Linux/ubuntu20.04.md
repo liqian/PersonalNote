@@ -12,3 +12,9 @@ sudo apt install sogouimebs
 #输入法设置
 sogouIme-configtool 
 ```
+
+## nds_sqlite3 运行问题
+- 缺少 libncurses.so.5
+```bash
+    sudo apt install libncurses5 libncurses5-dev
+```

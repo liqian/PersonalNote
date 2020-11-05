@@ -98,3 +98,73 @@ Git可以接受 kdiff3, tkdiff, meld, xxdiff, emerge, vimdiff, gvimdiff, ecmerge
 如果是在一个已经存在文件的文件夹(而不是空文件夹)中初始化 Git 仓库来进行版本控制的话，应该开始跟踪这些文件并提交。可通过 git add 命令来实现对指定文件的跟踪，然后执行 git commit 提交.
 
 
+
+# git stash
+
+## git stash list: 显示stash中的内容
+```bash
+git stash list
+# stash@{0}: On master: clean crur cache
+# stash@{1}: On master: MxDefault
+# stash@{2}: On master: project
+```
+## git stash drop: 删除stash中的缓存内容
+```bash
+git stash drop stash@{0}
+# Dropped stash@{0} (380ffaa2f41b4e91cc065755c7bea056e02e7bcd)
+```
+## git stash apply :命令时可以通过名字指定使用哪个stash，默认使用最近的stash（即stash@{0}）
+## git stash pop : 将缓存中的第一个缓存内容恢复到工作区
+## git stash branch branch_name: 从缓存区创建个分支，创建成功，会将存在内容丢弃。
+
+
+# git format-patch
+* git打patch
+* 需要先要在本地提交，然后才能打patch
+## 某次提交（含）之前的几次提交
+```
+git format-patch [commit sha1 id] -n
+```
+n指从sha1 id对应的commit开始算起n个提交。
+eg：
+```
+git format-patch  2a2fb4539925bfa4a141fe492d9828d030f7c8a8 -2
+```
+
+## 某个提交的patch
+```
+git format-patch 【commit sha1 id】 -1
+```
+eg
+
+```
+git format-patch  2a2fb4539925bfa4a141fe492d9828d030f7c8a8 -1
+```
+
+## 某两次提交之间的所有patch
+```
+git format-patch 【commit sha1 id】..【commit sha1 id】 
+```
+e.g:
+```
+git format-patch  2a2fb4539925bfa4a141fe492d9828d030f7c8a8..89aebfcc73bdac8054be1a242598610d8ed5f3c8
+```
+
+## 应用patch
+- 检查patch/diff是否能正常打入
+```
+git apply --check 【path/to/xxx.patch】
+git apply --check 【path/to/xxx.diff】
+```
+
+- 打入patch/diff
+```
+git apply 【path/to/xxx.patch】
+git apply 【path/to/xxx.diff】
+```
+
+或者
+
+```
+git  am 【path/to/xxx.patch】
+```

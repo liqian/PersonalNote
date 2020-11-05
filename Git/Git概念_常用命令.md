@@ -99,6 +99,12 @@
 ## git log 查看日志
 ## git commit --amend  撤销提交，也叫合并提交。
 - 本次提交同上次提交信息合并，用于修改漏提交文件或者写错log信息等情况
+## 回退本地代码
+
+```bash
+git reset --hard commit-id：回滚到commit-id，将commit-id后的提交全移出
+git reset --hard HEAD~3:将最近3次提交回滚
+```
 
 ## git reset HEAD <file> 取消暂存区文件
 - 相当于`git add <file>`命令逆操作。
