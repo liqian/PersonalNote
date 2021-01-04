@@ -11,4 +11,26 @@ com.sun.mail.smtp.SMTPSenderFailedException: 550 5.7.1 Client does not have   pe
 tag不需要 */
 # Publish-Over-SSH 插件
 
+## 邮件自定义变量内容，可用通过配置文件方式实现
+- 路径是相对应${WORKSPACE}的相对目录
+${PROPFILE,file="env.properties",property="line1"}
+echo xxxx=xx > t.properties
+
+使用echo创建文件
+echo "aaaa" >> hello.txt
+以追加的形式打开或创建文件,将字段写入到hello.txt;
+echo "aaaa" > hello.txt
+将字段写入hello.txt 覆盖之前的文件内容.
+
+在echo创建文件时写入换行
+echo -e "aaaa\nbbbb" >> hello.txt
+-e 代表执行转义，-E代表禁止转义
+
+注意：window下有可能非utf-8编码，解析会出现错误，使用如下bat:
+@echo off
+REM ::use utf-8 coding
+chcp 65001
+echo "# config file" > t.properties
+echo username=ftpuser >> t.properties
+echo password=ftpuser123 >> t.properties
 

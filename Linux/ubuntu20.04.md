@@ -18,3 +18,8 @@ sogouIme-configtool
 ```bash
     sudo apt install libncurses5 libncurses5-dev
 ```
+
+## 文件管理器 左侧栏设定
+```bash
+    vim ~/.config/user-dirs.dirs
+```

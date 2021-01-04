@@ -93,6 +93,7 @@
 ## git submodule组合初始化更新 递归
     gir submodue add rul path/name
     git submodule update --progress --init --recursive
+    
 ## git rm 删除文件
 ## git rm -r 删除目录
 ## git mv 移动文件
@@ -110,6 +111,16 @@ git reset --hard HEAD~3:将最近3次提交回滚
 - 相当于`git add <file>`命令逆操作。
 ## git checkout -- <file> 撤销对文件的修改
 - 相当于我们在Win GUi界面下的revert操作。 
+
+## git push
+- git 
+
+## git rebase
+- gerrit rebase有些特殊
+    1. rebase完后，gerrit认为都已经记过了评审所以无法提交（push)到gerrit上。
+    2. 一种解决办法是:跳过gerrit（不推荐）
+    3. 一种：本地修改内容，然后提交，rebase的内容自动跟着(push)上去了，并且gerrit上没有评审内容。
+
 
 ## 关于win和linux 跨平台开发是的编码问题
 - 一般情况最好不要启用git的自动转换字符的功能，如下配置

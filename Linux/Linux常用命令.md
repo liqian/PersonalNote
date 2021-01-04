@@ -1,6 +1,6 @@
 # 压缩解压
 7Z：
-	- 安装：sudo apt-get install p7zip-full
+	- 安装：sudo apt-get install p7zip-full p7zip-rar p7zip
 	- 解压7z：使用方法：7z x file file是你要解压的文件名。
 -----------------------------------------------------------------------------------------------------------
 tar

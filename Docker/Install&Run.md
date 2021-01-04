@@ -62,3 +62,45 @@ liqian@ubuntu:~$ sudo service docker status
 ```
 
 5. 重启Docker Engine: sudo service docker restart 
+
+
+# Install On Windows
+
+## Docker 和VMware兼容问题
+在window下如果安装了Docker，由于会用到Hyper-V，但是Hyper-V同时VMWare 16之前的版本是不兼容的。
+如果想用VMWare 需要停掉Docker服务，然后关掉Hyper-V。
+- 关掉Hyper-V: 在[程序和功能]-->[启用或关闭Windows功能]中进行打开和关闭。
+
+# 配置国内镜像源 加速
+1. 新建或编辑daemon.json
+```
+vim /etc/docker/daemon.json
+```
+ 
+2. daemon.json中编辑如下
+```json
+{
+    "registry-mirrors": ["http://hub-mirror.c.163.com"]
+}
+```
+ 
+3. 重启docker
+```bash
+systemctl restart docker.service
+```
+ 
+4. 执行docker info查看是否修改成功
+```
+docker info
+```
+
+5. Windows的使用Docker Desktop就可以修改。
+## 国内的镜像源
+* 网易
+http://hub-mirror.c.163.com
+* Docker中国区官方镜像 -- 速度还有有点慢，公司网络
+https://registry.docker-cn.com
+* 中国科技大学 -- 
+https://docker.mirrors.ustc.edu.cn
+* 阿里云容器  服务 -- 速度还可以，公司网路
+https://cr.console.aliyun.com/
