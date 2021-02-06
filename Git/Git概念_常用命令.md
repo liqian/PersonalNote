@@ -109,6 +109,7 @@ git reset --hard HEAD~3:将最近3次提交回滚
 
 ## git reset HEAD <file> 取消暂存区文件
 - 相当于`git add <file>`命令逆操作。
+## git reset HEAD~1: 取消commit
 ## git checkout -- <file> 撤销对文件的修改
 - 相当于我们在Win GUi界面下的revert操作。 
 
@@ -120,8 +121,31 @@ git reset --hard HEAD~3:将最近3次提交回滚
     1. rebase完后，gerrit认为都已经记过了评审所以无法提交（push)到gerrit上。
     2. 一种解决办法是:跳过gerrit（不推荐）
     3. 一种：本地修改内容，然后提交，rebase的内容自动跟着(push)上去了，并且gerrit上没有评审内容。
+- gerrit change-id的时候，会报错
+说明解释：https://git.eclipse.org/r/Documentation/error-change-closed.html
+https://xbuba.com/questions/11972384
+```
+To ssh://gerrit.mxdbcnds.com:29418/VCB_MXNavi_All
+ ! [remote rejected]   HEAD -> refs/for/branch_feature_cross_version (change http://gerrit.mxdbcnds.com/44870 closed)       
+error: failed to push some refs to 'ssh://gerrit.mxdbcnds.com:29418/VCB_MXNavi_All'
+```
+Do this to fix issue:
+
+git commit --amend
+delete change id
+save and quit
+new change id will be added to the commit. it can be verified by git log.
+push again
+
+1. git rest --soflt HEAD~1
 
 
+## tag
+- push所有tag，命令格式为：git push [origin] --tags  不区分gerrit和gitlab，直接推送到gitlab上
+>例如：
+>git push --tags
+>或
+>git push origin --tags
 ## 关于win和linux 跨平台开发是的编码问题
 - 一般情况最好不要启用git的自动转换字符的功能，如下配置
    1. 提交检出均不转换  

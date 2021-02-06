@@ -26,3 +26,32 @@ To verify that the agent is running and is reachable from VS Code's environment,
 - 连接上服务器后，发开 VSCode的Terminal，等同于PUTTY，XShell等工具，命令行操作
 - File-> Open File :可以打开远程文件。
 - 开启远程编码
+
+# Common 
+## Git Graph
+- 图形界面查看git log的插件，有点类似于小乌龟的，比较好用。
+
+## GitLens
+- 在查看源码的时候，直接在每行形式最新的提交/修改log
+- 
+## Bracket Pair Colorizer
+- 彩虹括弧，显示配对信息，方便阅读源码
+
+## Bookmarks
+- 书签
+- Ctrl + Alt + K 添加/删除书签
+- 
+## Live Server
+- 预览Html
+
+## CODEIF
+- https://unbug.github.io/codelf/
+
+
+
+# C++
+- Cmake/Cmake Tool 如果没有必要，不推荐使用，太耗性能了
+
+# Java
+## Maven for Java
+- 自动刷新工程和编译，导致机器卡

@@ -5,3 +5,7 @@ C:\Users\Administrator\AppData\Local\Microsoft\vscode-cpptools
 ## workspaceStorage
 C:\Users\Administrator\AppData\Roaming\Code\User\workspaceStorage  
 - workspaceStorage：平时打开工程的缓存文件，也可以删除。
+
+
+# VSCode架构
+- https://zhuanlan.zhihu.com/p/96041706
