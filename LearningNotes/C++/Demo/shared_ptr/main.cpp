@@ -118,6 +118,23 @@ void main(){
     
     Const2NonConst();
 */
-    Conver2ParentClass();
+    //Conver2ParentClass();
+
+    const int* p0 = new int(0);
+    int const* p1 = new int(1);
+    int* const p2 = new int(2);
+    printf("p0=%d\n", *p0);
+    printf("p1=%d\n", *p1);
+    printf("p2=%d\n", *p2);
+
+    p0 = p1;//指针指向发生变更
+    *p2 = 100;//指针指向区域内容发生变更
+    printf("p0=%d\n", *p0);
+    printf("p1=%d\n", *p1);
+    printf("p2=%d\n", *p2);
+
+    *p0 = 200;//指针指向区域为const，不能修改，编译出错
+    *p1 = 200;//指针指向区域为const，不能修改，编译出错
+    p2 = p1;//指针为const，不能修改，编译出错。
     return ;
 }

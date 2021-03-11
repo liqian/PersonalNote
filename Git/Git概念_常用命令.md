@@ -141,11 +141,17 @@ push again
 
 
 ## tag
-- push所有tag，命令格式为：git push [origin] --tags  不区分gerrit和gitlab，直接推送到gitlab上
+- push所有tag，命令格式为：`git push [origin] --tags`  不区分gerrit和gitlab，直接推送到gitlab上
 >例如：
 >git push --tags
 >或
 >git push origin --tags
+- `git tag`列出所有tag
+- `git tag tagName` 创建tag 或 `git tag -a tagName -m "tag messsage"`
+- `git show tagName` 查看tag详细信息
+- `git tag -a tagName commitid -m "my tag"` :给某个commitId添加tag
+- `git tag -d tagName`:删除tag
+
 ## 关于win和linux 跨平台开发是的编码问题
 - 一般情况最好不要启用git的自动转换字符的功能，如下配置
    1. 提交检出均不转换  

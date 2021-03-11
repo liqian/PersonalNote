@@ -46,8 +46,16 @@ To verify that the agent is running and is reachable from VS Code's environment,
 
 ## CODEIF
 - https://unbug.github.io/codelf/
+- 自动搜索开源 等项目，自动给变量起名
 
+## Auto Rename Tag
+- Auto rename paired HTML/XML tag
+## Auto Close Tag
+- Automatically add HTML/XML close tag, same as Visual Studio IDE or Sublime Text
 
+## Auto Complete Tag
+- 将上面2个打包下载安装。
+-Extension Packs to add close tag and rename paired tag automatically for HTML/XML
 
 # C++
 - Cmake/Cmake Tool 如果没有必要，不推荐使用，太耗性能了
