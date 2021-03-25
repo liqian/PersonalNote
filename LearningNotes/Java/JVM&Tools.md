@@ -41,6 +41,12 @@ JVM通过类加载机制，把class文件装载进JVM中，然后JVM解析class�
 ![gc_algo](resources/gc_algo.png)
 
 
+# JVM常用GC日志打印
+* -XX:+PrintGC 每次GC时打印相关信息
+* -XX:+PrintGCDetails 每次GC时打印详细信息
+* -XX:+PrintGCTimeStamps 打印每次GC的时间戳
+* -Xloggc:/tmp/jvm.log 设置垃圾回收日志打印的文件，文件名称可以自定义
+
 # Dump文件生成方式
 ## 使用 JVM 参数获取 dump 文件
 1. -XX:+HeapDumpOnOutOfMemoryError
@@ -129,9 +135,3 @@ Heap dump file created
 分析 Heap Dump 的工具都可以获取 Heap Dump 文件。
 比如：jdk 自带的工具 jvisualvm。
 其它工具：Eclipse memory analyzer（jmat）、JProfiler 等。
-
-# JVM常用GC日志打印
-* -XX:+PrintGC 每次GC时打印相关信息
-* -XX:+PrintGCDetails 每次GC时打印详细信息
-* -XX:+PrintGCTimeStamps 打印每次GC的时间戳
-* -Xloggc:/tmp/jvm.log 设置垃圾回收日志打印的文件，文件名称可以自定义

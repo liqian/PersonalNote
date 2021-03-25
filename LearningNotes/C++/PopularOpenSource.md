@@ -28,3 +28,10 @@
 ## tmux
 - linux上终端软件，长连接。
 
+## RPC 框架 rest_rpc
+- https://github.com/qicosmos/rest_rpc
+- 简介：C++11 high performance，cross platform,easy to use rpc framework.
+- Modern C++开发的RPC库。
+
+## webbench
+- linux下的网站压力测试框架，比较轻量，适合初学者学习网络编程的

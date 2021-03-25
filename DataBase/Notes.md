@@ -1,4 +1,12 @@
+# 工具
 ## dbdiagrm.io 数据库设计
+## PDMan
+- 一款开源免费的数据库建模工具。PDMan是PowerDesigner的一个优秀的替代方案。
+- MIT协议开源
+- Windos Linux Mac
+- 目前系统默认支持Orcale MySQL ，java的代码自动生成。 其他类型的数据库或者语言，需要自己添加相应设置和代码dot模板。
+- 一键自动生成Markdown以及HTML格式的表结构文档。
+
 
 # 几种常用数据库对比和简介
 ## Redis 
