@@ -37,3 +37,61 @@ target_include_directories(hello-world INTERFACE hello)
 target_link_libraries(hello-world PUBLIC hello)
 target_include_directories(hello-world PUBLIC hello)
 ```
+
+## execute_process
+### 参数
+```
+execute_process(COMMAND <cmd1> [args1...]]
+                [COMMAND <cmd2> [args2...] [...]]
+                [WORKING_DIRECTORY <directory>]
+                [TIMEOUT <seconds>]
+                [RESULT_VARIABLE <variable>]
+                [OUTPUT_VARIABLE <variable>]
+                [ERROR_VARIABLE <variable>]
+                [INPUT_FILE <file>]
+                [OUTPUT_FILE <file>]
+                [ERROR_FILE <file>]
+                [OUTPUT_QUIET]
+                [ERROR_QUIET]
+                [OUTPUT_STRIP_TRAILING_WHITESPACE]
+                [ERROR_STRIP_TRAILING_WHITESPACE])
+```
+按指定的先后顺序运行一个或多个命令，每个进程的输出通过管道连接作为下一个进程的输入。所有的进程使用单个的标准错误输出管道。
+如果指定了WORKING_DIRECTORY，则指定的目录将作为子进程当前的工作目录。
+
+如果指定了TIMEOUT值，则如果在指定的时间内（以秒为单位计算，允许有小数位）子进程执行仍未完成，则将会被中断。
+
+如果指定了RESULT_VARIABLE变量，则最后命令执行的结果将保存在该变量中，它是最后一个子进程执行完后的返回值或描述某种错误信息的字符串。
+
+如果指定了OUTPUT_VARIABLE或ERROR_VARIABLE变量，则该变量会分别保存标准输出和标准错误输出的内容。
+
+如果指定的变量是同一个，则输出会按产生的先后顺序保存在该变量中。
+
+如果指定了INPUT_FILE，UTPUT_FILE或ERROR_FILE等文件名，则它们会分别与第一个子进程的标准输入，最后一个子进程的标准输出以及所有子进程的标准错误输出相关联。
+
+如果指定了OUTPUT_QUIET或ERROR_QUIET，则会忽略标准输出和错误输出。如果在同一管道中同时指定了多个OUTPUT_*或ERROR_*选项，则优先级顺序是未知的（应避免这种情况）。
+
+如果未指定任何OUTPUT_*或ERROR_*选项，则命令CMake所在进程共享输出管道。
+
+您可以指定RESULT_VARIABLE或OUTPUT_VARIABLE使用execute_process命令根据执行过程的返回码或标准输出设置CMake变量; 这可能有助于影响后续的CMake行为。
+
+e.g:
+```
+execute_process(
+  COMMAND ${ANT_PATH} install "-Dzserio_cpp_reflect.install_dir=${CMAKE_CURRENT_BINARY_DIR}"
+  WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}")
+```
+
+### 同add_custom_command区别
+- execute_process将在CMake配置阶段运行
+- add_custom_command将在代码编译期间运行（在CMake完成之后）
+
+
+## if (NOT TARGET projectName)
+判断是否有 projectName 的工程，用于工程依赖的时候最判断
+e.g
+```
+if (TARGET nds252)
+else()
+endif()
+```

@@ -23,3 +23,8 @@ sogouIme-configtool
 ```bash
     vim ~/.config/user-dirs.dirs
 ```
+
+## 登录用户强制退出
+```bash
+gnome-session-quit --force
+```
