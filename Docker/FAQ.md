@@ -1,3 +1,8 @@
+# window上安装完DockerDestop后，内存一直无法释放
+由于安装DockerDestop后，默认需要开启Hyper-v。
+但是在window上开启hyper-v后，虚拟机一直占着资源，无法释放，需要手动进行关闭。
+[win menu]--> [hyper-v Manager] 中进行关闭。
+
 # 安装完docker后，执行docker相关命令，出现 Got permission denied：
 
 `

@@ -16,7 +16,3 @@ https://www.hangge.com/blog/cache/detail_2506.html
 @Service
 @Configration
 @Bean
-
-2.5 离职完毕
-12K 
-- 杭州公司：14 项目奖 15/16

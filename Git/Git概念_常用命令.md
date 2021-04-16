@@ -114,7 +114,14 @@ git reset --hard HEAD~3:将最近3次提交回滚
 - 相当于我们在Win GUi界面下的revert操作。 
 
 ## git push
-- git 
+- push表示将commit后的内容提交到远端服务器, 如果当前分支已经同远程分支绑定，push后的origin master可以省略
+```
+git push origin master
+```
+- gerrit的提交方式,origin不能省略
+```
+git push origin HEAD:refs/for/master 
+```
 
 ## git rebase
 - gerrit rebase有些特殊
@@ -142,10 +149,10 @@ push again
 
 ## tag
 - push所有tag，命令格式为：`git push [origin] --tags`  不区分gerrit和gitlab，直接推送到gitlab上
->例如：
->git push --tags
->或
->git push origin --tags
+    >例如：
+    >git push --tags
+    >或
+    >git push origin --tags
 - `git tag`列出所有tag
 - `git tag tagName` 创建tag 或 `git tag -a tagName -m "tag messsage"`
 - `git show tagName` 查看tag详细信息
