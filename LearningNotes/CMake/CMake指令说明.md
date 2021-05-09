@@ -95,3 +95,31 @@ if (TARGET nds252)
 else()
 endif()
 ```
+## 使用C++11的thread库
+### 方法一
+```cmake
+PROJECT(HELLO)
+set(CMAKE_CXX_FLAGS "${CAMKE_CXX_FLAGS} -std=c++11")
+AUX_SOURCE_DIRECTORY(. SRC_LIST)
+ADD_EXECUTABLE(hello ${SRC_LIST})
+```
+从cmake的CMakeLists.txt文件中可以看出cmake是像g++使用c++11特性一样，都有-std=c++11，所以像一样加个-pthread解决就行。
+
+```cmake
+PROJECT(HELLO)
+set(CMAKE_CXX_FLAGS "${CAMKE_CXX_FLAGS} -std=c++11 -pthread")
+AUX_SOURCE_DIRECTORY(. SRC_LIST)
+ADD_EXECUTABLE(hello ${SRC_LIST})
+```
+NOTE: -pthread 不要使用 -l-pthread; -pthread是新特性，推荐。-lpthread 已被淘汰。
+
+### 方法二
+使用包Threads和链接${CMAKE_THREAD_LIBS_INIT}
+```cmake
+PROJECT(HELLO)
+set(CMAKE_CXX_FLAGS "${CAMKE_CXX_FLAGS} -std=c++11")
+FIND_PACKAGE(Threads)
+AUX_SOURCE_DIRECTORY(. SRC_LIST)
+ADD_EXECUTABLE(hello ${SRC_LIST})
+TARGET_LINK_LIBRARIES(hello ${CMAKE_THREAD_LIBS_INIT})
+```

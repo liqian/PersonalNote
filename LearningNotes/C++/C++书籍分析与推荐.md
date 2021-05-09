@@ -62,6 +62,7 @@ C++编程书籍不计其数，涉及模板元编程的书籍却屈指可数。�
 
 ### [C++ Concurrency In Action](http://library.lol/main/B37A076D1A1884BF3B0B9A867EA47DC3)
 这本书从C++并发开始，​细致地讲解了C++世界中多线程的点点滴滴。从std::thread, std::mutex, std::future等基础类的使用，再到高级线程​管理和多线程的调试​；即使你从来没有写过多线程代码，用这本书也不会有太大压力。值得注意的是，本书的附录中有着详实的C++11基础知识的学习，如果你对右值和移动语义、constexpr常量表达式、lambda表达式和变参模板都还不太熟悉——快去这本书的附录看看吧， 你会找到宝藏。
+- 多线程数据，值得学习
 
 ## 参考书籍：适用各个阶段的学习者
 ### [The C++ Programming Language](http://library.lol/main/6D95C5901B9732BF2339D76470916966)

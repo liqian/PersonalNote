@@ -74,7 +74,11 @@ Git可以接受 kdiff3, tkdiff, meld, xxdiff, emerge, vimdiff, gvimdiff, ecmerge
 - 提交包含混合换行符的文件时给出警告  
     `git config --global core.safecrlf warn`
 
-    
+## 10. 支持long path
+下载是可能会遇到Filename too long错误，在git bash下执行一下
+    git config --global core.longpaths true 
+命令就能正常下载了    
+
 # git clone
     git clone url
     git clone url localname

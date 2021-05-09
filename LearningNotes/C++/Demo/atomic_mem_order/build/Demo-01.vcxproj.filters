@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\FirefoxDownload\MarkDownNote\PersonalNote\LearningNotes\C++\Demo\atomic_mem_order\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\FirefoxDownload\MarkDownNote\PersonalNote\LearningNotes\C++\Demo\atomic_mem_order\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4B32C7F2-94DB-3D2C-8B31-8B6654712E27}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
