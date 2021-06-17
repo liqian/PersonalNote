@@ -38,3 +38,15 @@
 - LevelDB 是单进程的服务，性能非常之高，在一台4核Q6600的CPU机器上，每秒钟写数据超过40w，而随机读的性能每秒钟超过10w。
 此处随机读是完全命中内存的速度，如果是不命中，速度大大下降。
 - **levelDB是一种更适合写多读少的NoSQL数据库**
+
+## ElasticSearch
+- [OfficalWebsit](https://www.elastic.co/cn/elasticsearch/)
+- [UserGuide](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)
+- Elasticsearch 是一个分布式、RESTful 风格的搜索和数据分析引擎。
+- Kibana 是ES的一个数据可视化工具
+- ElasticSearch是基于lucence开发的，也就是运行需要java jdk支持。所以要先安装JAVA环境。
+> 由于ElasticSearch 5.x 往后依赖于JDK 1.8的，所以现在我们下载JDK 1.8或者更高版本。
+- 官方支持的客户端语言：Java、Python、.NET、SQL 和 PHP。 暂时没有官方C++客户端支持。
+### Install
+- [OfficalInstall](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)
+

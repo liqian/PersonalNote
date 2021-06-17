@@ -92,11 +92,14 @@ void test()
 
 void testLockFree()
 {
+    std::atomic<A*> ptrA;
     //std::boolalpha的作用是使bool型变量按照false、true的格式输出。如不使用该标识符，那么结果会按照1、0的格式输出。
     //而std::noboolalpha的作用刚好相反
     std::cout << std::boolalpha
               << "std::atomic<A> is lock free? "
               << std::atomic<A>{}.is_lock_free() << '\n' //std::atomic<A>{} = std::atomic<A>()
+              << "std::atomic<A*> is lock free? "
+              << ptrA.is_lock_free() << '\n'
               << "std::atomic<B> is lock free? "
               << std::atomic<B>{}.is_lock_free() << '\n';
 }
@@ -164,6 +167,8 @@ int testCompareExchange()
 }
 int main()
 {
-    testCompareExchange();
+    //testCompareExchange();
+
+    testLockFree();
     return 0;
 }

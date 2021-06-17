@@ -4,22 +4,14 @@ https://hub.docker.com/editions/community/docker-ce-desktop-windows/
 
 **Install**
 Double-click Docker for Windows Installer to run the installer.
+> 双击安装
 
 When the installation finishes, Docker starts automatically. 
+> 安装完成后，Docker自动启动
 
 The whale  in the notification area indicates that Docker is running, and accessible from a terminal.
+> window右下角的小鲸鱼通知区域表示Docker正在运行，同时可以通过终端访问。
 
-**Run**
-Open a command-line terminal like PowerShell, and try out some Docker commands!
-
-Run docker version to check the version.
-
-Run docker run hello-world to verify that Docker can pull and run images.
-
-**Enjoy**
-Docker is available in any terminal as long as the Docker Desktop for Windows app is running. 
-
-Settings are available on the UI, accessible from the Docker whale in the taskbar.
 
 ## [Docker Desktop for Windows user manual](https://docs.docker.com/docker-for-windows/)
 

@@ -172,3 +172,38 @@ git apply 【path/to/xxx.diff】
 ```
 git  am 【path/to/xxx.patch】
 ```
+
+# git branch
+
+## 创建分支
+```
+git branch branch_name
+```
+在本地创建一个分支名字为 branch_name.
+
+## 分支提交到远程
+```
+git push origin remote_branch_name
+```
+
+一般我们会将branch_name 和remote_branch_name 保持一样，方便理解。
+
+这时候，如果`git pull` 会报错，参考如下说明
+
+## 建立本地分支和远程分支的关联
+```
+git branch --set-upstream-to=origin/remote_branch_name branch_name
+```
+
+如果不运行，会报如下错误：
+```
+There is no tracking information for the current branch.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> branch_name
+```
+

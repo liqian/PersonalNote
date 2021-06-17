@@ -1,3 +1,0 @@
-D:/FirefoxDownload/MarkDownNote/PersonalNote/LearningNotes/C++/Demo/atomic_mem_order/build/CMakeFiles/Demo-01.dir
-D:/FirefoxDownload/MarkDownNote/PersonalNote/LearningNotes/C++/Demo/atomic_mem_order/build/CMakeFiles/ALL_BUILD.dir
-D:/FirefoxDownload/MarkDownNote/PersonalNote/LearningNotes/C++/Demo/atomic_mem_order/build/CMakeFiles/ZERO_CHECK.dir

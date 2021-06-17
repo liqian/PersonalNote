@@ -36,3 +36,5 @@ If you don’t want to use sudo when you use the docker command, create a Unix g
     newgrp docker     #更新用户组
     docker ps    #测试docker命令是否可以使用sudo正常使用
     ```
+
+    # JFrog 搭建一个docker自己的源

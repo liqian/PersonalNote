@@ -1,3 +1,6 @@
+# 英文书籍网站
+https://2lib.org/
+
 # C++书籍分析与推荐
 https://zhuanlan.zhihu.com/p/246073021
 

@@ -1,3 +1,18 @@
+# 简介
+## 什么是Docker
+- Docker 是一个开源的应用容器引擎，基于 Go 语言并遵从 Apache2.0 协议开源；
+- Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化；
+- 容器是完全使用沙箱机制，相互之间不会有任何接口，更重要的是容器性能开销极低；
+- Docker 从 17.03 版本之后分为 CE（Community Edition-社区版）和 EE（Enterprise Edition-企业版）。
+## Docker的应用场景
+- Web应用的自动化打包和发布，自动化测试和持续集成、发布；
+- 在服务型环境中部署和调整数据库或其他的后台应用；
+- 从头编译或者扩展现有的 OpenShift 或 Cloud Foundry 平台来搭建自己的 PaaS 环境。
+## 友情链接
+- [Docker官网](https://www.docker.com/)
+- [Docker中文社区](https://www.docker.org.cn/)
+- [Docker Hub](https://hub.docker.com/)
+
 # Command
 ## docler --help
 帮助文档，说明。

@@ -123,3 +123,43 @@ AUX_SOURCE_DIRECTORY(. SRC_LIST)
 ADD_EXECUTABLE(hello ${SRC_LIST})
 TARGET_LINK_LIBRARIES(hello ${CMAKE_THREAD_LIBS_INIT})
 ```
+
+#### cmake 命令行工具参数说明
+- [OfficalDoc](https://cmake.org/cmake/help/latest/manual/cmake.1.html)
+1. `-S <path-to-source>`
+> Path to root directory of the CMake project to build.
+
+e.g
+```
+cmake -S mysourceDir
+```
+
+2. `-B <path-to-build>`
+> Path to directory which CMake will use as the root of build directory.
+> If the directory doesn't already exist CMake will make it.
+
+e.g
+```
+cmake -B mysourceBuildDir
+```
+
+3. `-D <var>:<type>=<value>, -D <var>=<value>`
+>Create or update a CMake CACHE entry.
+
+> When CMake is first run in an empty build tree, 
+> it creates a CMakeCache.txt file and populates it with customizable settings for the project. 
+
+> This option may be used to specify a setting that takes priority over the project's default value. 
+> The option may be repeated for as many CACHE entries as desired.
+
+> If the `:<type>` portion is given it must be one of the types specified by the set() command documentation for its CACHE signature. 
+> If the `:<type>` portion is omitted the entry will be created with no type if it does not exist with a type already. 
+> If a command in the project sets the type to PATH or FILEPATH then the `<value>` will be converted to an absolute path.
+
+> This option may also be given as a single argument: `-D<var>:<type>=<value>` or `-D<var>=<value>`.
+
+e.g
+```
+cmake -DCMAKE_BUILD_TYPE=Release
+```
+

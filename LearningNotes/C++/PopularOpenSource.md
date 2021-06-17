@@ -91,3 +91,37 @@ OpenSceneGraph是一个开源的三维引擎，被广泛的应用在可视化仿
 - http://www.osgchina.org/
 - ![SourceCode](https://github.com/openscenegraph/OpenSceneGraph)
 - ![LearnNode](https://github.com/Epulari/osg-exercise)
+
+
+# Github学习资料
+## CPP-Concurrency-In-Action-2ed-2019
+- 作为对《C++ Concurrency in Action - SECOND EDITION》的中文翻
+- [github链接](git@github.com:xiaoweiChen/CPP-Concurrency-In-Action-2ed-2019.git)
+
+## Cpp_Concurrency_In_Action
+- 作为对《C++ Concurrency in Action》英文版的中文翻译。
+- [github链接](git@github.com:xiaoweiChen/Cpp_Concurrency_In_Action.git)
+
+## Concurrency-with-Modern-Cpp
+- 作为对《Concurrency with Modern C++》的中文翻译。
+- [github链接](git@github.com:xiaoweiChen/Concurrency-with-Modern-Cpp.git)
+## atomic_queue
+- C++14 multiple-producer-multiple-consumer lockless queues based on circular buffer with std::atomic.
+- [github链接](git@github.com:max0x7ba/atomic_queue.git)
+## DesignPattern
+- C++11全套设计模式-23种指针的用法(a full DesignPattern implement with c++11)
+- [github链接](git@github.com:jaredtao/DesignPattern.git)
+
+## CMake-Cookbook
+- 作为对《CMake Cookbook》的中文翻译。
+- [github链接](git@github.com:xiaoweiChen/CMake-Cookbook.git)
+
+## CPP-17-STL-cookbook
+- 作为对《C++17 STL cookbook》英文版的中文翻译。
+- [github链接](git@github.com:xiaoweiChen/CPP-17-STL-cookbook.git)
+
+## buttonrpc_cpp14
+- 几百行代码实现的modern c++ rpc library
+- [C++极简RPC库Demo.md]
+- [github链接](git@github.com:button-chen/buttonrpc_cpp14.git)
+- [哔哩哔哩视频](https://www.bilibili.com/video/BV1Qc411877H?t=399)

@@ -10,7 +10,7 @@ sudo /etc/init.d/vsftpd restart # 重启
 sudo /etc/init.d/vsftpd start  # 启动
 sudo /etc/init.d/vsftpd stop # 关闭
 ```
-# 设置
+# 设置 /etc/vsftpd.conf
 ```bash
 anonymous_enable=NO #禁止匿名账号登录
 local_enable=YES #允许本地账号登录

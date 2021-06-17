@@ -7,6 +7,7 @@ Older versions of Docker were called docker, docker.io, or docker-engine. If the
 ```bash
 sudo apt-get remove docker docker-engine docker.io containerd runc
 ```
+It’s OK if apt-get reports that none of these packages are installed.
 
 ## Uninstall Docker Engine:  
 1. Uninstall the Docker Engine, CLI, and Containerd packages:
@@ -14,11 +15,16 @@ sudo apt-get remove docker docker-engine docker.io containerd runc
 sudo apt-get purge docker-ce docker-ce-cli containerd.io
 ```
 
-2. Images, containers, volumes, or customized configuration files on your host(`/var/lib/docker/`) are not automatically removed.  
+2. Images, containers, volumes, or customized configuration files on your host(`/var/lib/docker/`) are not automatically removed. 
+
+The contents of `/var/lib/docker/`, including images, containers, volumes, and networks, are preserved. If you do not need to save your existing data, and want to start with a clean installation.
 To delete all images, containers, and volumes:
 ```bash
 sudo rm -rf /var/lib/docker
 ```
+
+## Install Docker
+
 ## test Docker
 Verify that Docker Engine is installed correctly by running the hello-world image.
 ```
