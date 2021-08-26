@@ -31,11 +31,15 @@ public:
 class B1: public B {
 public:
     B1(){
-        i=1;
-        printf("_B1 alloc \n");
+        i=-1;
+        printf("_B1 alloc %d.\n",i);
+    }
+    B1(int _i) {
+        i = _i;
+        printf("_B1 alloc %d.\n",i);
     }
     ~B1(){
-        printf("_B1 dealloc \n");
+        printf("_B1 dealloc %d.\n",i);
     }
     int getI(){
         return i;
@@ -43,6 +47,48 @@ public:
 private:
     int i;
 };
+
+
+class TestClassUniquePtr
+{
+public:
+    TestClassUniquePtr()
+        :
+        m_p_b1(new B1())
+    {
+       
+    }
+private:
+    std::unique_ptr<B1> m_p_b1;
+};
+
+class TestClassVecUniquePtr
+{
+public:
+    TestClassVecUniquePtr()
+    {
+        m_p_b1.push_back(std::make_unique< B1>(1) );
+        m_p_b1.push_back(std::make_unique< B1>(2));
+        m_p_b1.push_back(std::make_unique< B1>(3));
+    }
+private:
+    std::vector<std::unique_ptr<B1>> m_p_b1;
+};
+
+std::unique_ptr<B> getUniquePtr1()
+{
+    return std::unique_ptr<B>(new B());
+}
+std::unique_ptr<B> getUniquePtr2()
+{
+    return std::make_unique<B>();
+}
+std::unique_ptr<B> getUniquePtr3()
+{
+    std::unique_ptr<B> p(new B());
+    return std::move(p);
+}
+
 
 void testSimple()
 {
@@ -62,9 +108,9 @@ void testSimple()
 
     //判断空指针
     if (ptr) {
-        printf("unique_ptr is null!");
+        printf("unique_ptr is null!\n");
     } else {
-        printf("unique_ptr is not null!");
+        printf("unique_ptr is not null!\n");
     }
 
     //赋值
@@ -88,6 +134,26 @@ void testSimple()
         std::unique_ptr<int> u_p1(new int(1));
         std::unique_ptr<int> u_p2 =std::move(u_p1);
     }
+    //函数返回值
+    {
+        std::unique_ptr<B> u_pf1 = getUniquePtr1();
+
+        std::unique_ptr<B> u_pf2 = getUniquePtr2();
+
+        std::unique_ptr<B> u_pf3 = getUniquePtr3();
+    }
+    {
+        TestClassUniquePtr p1;
+
+        //TestClassUniquePtr p2=p1;//编译错误，错误信息：尝试引用已删除的函数
+
+    }
+
+    
+    {
+        TestClassVecUniquePtr p1;
+        //TestClassVecUniquePtr p2 = p1;//编译错误，错误信息：尝试引用已删除的函数
+    }
 }
 void testVectorOfBaseType()
 {
@@ -107,10 +173,12 @@ void testVectorOfBaseType()
         
         for (int i = 0; i < vecUniqueInt.size(); ++i) {
             printf("%d\n", *(vecUniqueInt.at(i)));
+            int* pi = vecUniqueInt.at(i).get();
         }
 
         for (int i = 0; i < vecUniqueInt.size(); ++i) {
             printf("%d\n", *(vecUniqueInt[i]));
+            int* pj = vecUniqueInt[i].get();
         }
 
         for (int i = 0; i < vecUniqueInt.size(); ++i) {
@@ -120,11 +188,44 @@ void testVectorOfBaseType()
             std::unique_ptr<int>& u_t4 = vecUniqueInt.at(i);
             
         }
+
+        for (int i = 0; i < vecUniqueInt.size(); ++i) {
+         
+            std::unique_ptr<int> u_t4 = std::move(vecUniqueInt.at(i));
+        }
     }
+}
+void func(std::unique_ptr<B1> p)
+{
+    printf("%d!\n", p->getI());
+}
+
+void func1(std::unique_ptr<B1>& p)
+{
+    printf("%d!\n", p->getI());
+}
+void const_func1(const std::unique_ptr<B1>& p)
+{
+    printf("%d!\n", p->getI());
 }
 void main(){
     
-    testSimple();
-    testVectorOfBaseType();
+    //testSimple();
+    //testVectorOfBaseType();
+    {
+        func(std::unique_ptr<B1>(new B1(1)));
+    }
+    {
+        std::unique_ptr<B1> p(new B1(1));
+        //func(p);//编译报错
+        func(std::move(p));
+    }
+
+    {
+        std::unique_ptr<B1> p(new B1(2));
+        func1(p);
+        const_func1(p);
+    }
+  
     return ;
 }

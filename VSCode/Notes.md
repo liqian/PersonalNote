@@ -9,3 +9,11 @@ C:\Users\Administrator\AppData\Roaming\Code\User\workspaceStorage
 
 # VSCode架构
 - https://zhuanlan.zhihu.com/p/96041706
+
+# Linux Remote-ssh connect to windows
+error: time out 
+setting->extensions->remote-ssh->edit in setting.json
+add new line:
+```
+"remote.SSH.useLocalServer": false,
+```

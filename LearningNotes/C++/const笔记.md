@@ -31,6 +31,7 @@
 > p1=1
 > p2=100
 
+4. int * const p = new int(1)  const修改的是指针，表示指针不能修改
 ```C++
     
     

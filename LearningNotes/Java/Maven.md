@@ -44,3 +44,8 @@
 ```
 - 使用： mvn project-info-reports:dependencies  
 在target下生成一个site文件夹，里边有个dependency.html，进去就能看到详细的依赖的信息
+
+- Refecnce
+> 1. https://blog.frankel.ch/creating-self-contained-executable-jars/
+> 2. https://www.logicbig.com/tutorials/spring-framework/spring-boot/executable-jar-structure.html
+> 3. http://maven.apache.org/plugins/maven-shade-plugin/examples/resource-transformers.html#ManifestResourceTransformer

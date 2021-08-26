@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\FirefoxDownload\MarkDownNote\PersonalNote\LearningNotes\C++\Demo\VariadicTemplate\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\FirefoxDownload\MarkDownNote\PersonalNote\LearningNotes\C++\Demo\VariadicTemplate\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{DA660946-4D86-339E-B5D9-25642AC4AE6B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

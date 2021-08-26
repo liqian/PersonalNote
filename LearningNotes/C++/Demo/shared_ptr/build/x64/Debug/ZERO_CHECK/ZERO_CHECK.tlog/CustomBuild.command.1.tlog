@@ -1,0 +1,10 @@
+^D:\FIREFOXDOWNLOAD\MARKDOWNNOTE\PERSONALNOTE\LEARNINGNOTES\C++\DEMO\SHARED_PTR\BUILD\CMAKEFILES\C40B1481A2F900BEEBBEC04F56D8086A\GENERATE.STAMP.RULE
+setlocal
+C:\3rd_party\cmake-3.18.0-win64-x64\bin\cmake.exe -SD:/FirefoxDownload/MarkDownNote/PersonalNote/LearningNotes/C++/Demo/shared_ptr -BD:/FirefoxDownload/MarkDownNote/PersonalNote/LearningNotes/C++/Demo/shared_ptr/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/FirefoxDownload/MarkDownNote/PersonalNote/LearningNotes/C++/Demo/shared_ptr/build/Demo.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -280,6 +280,7 @@ void testLockFreeStack()
     LockFreeStack stack;
 
     {
+        //std::thread 默认情况使用的是浅拷贝，所以如果想要应用需要使用std::ref
         std::thread t1(threadLockFreeRun, std::ref(stack), 5000, "t1 ");
 
         std::thread t2(threadLockFreeRun, std::ref(stack), 3000, "t2 ");

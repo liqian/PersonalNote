@@ -1,0 +1,1 @@
+1. 将本机上的 id_rsa.pub里的内容拷贝到目标机器：~/.ssh/authorized_keys 中就可以了。

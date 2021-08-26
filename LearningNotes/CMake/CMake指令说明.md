@@ -38,6 +38,9 @@ target_link_libraries(hello-world PUBLIC hello)
 target_include_directories(hello-world PUBLIC hello)
 ```
 
+## target_include_directories 和 include_directories 区别
+- https://blog.csdn.net/zhizhengguan/article/details/115331314
+
 ## execute_process
 ### 参数
 ```
@@ -95,6 +98,10 @@ if (TARGET nds252)
 else()
 endif()
 ```
+## cmake command line tool
+https://cmake.org/cmake/help/latest/manual/cmake.1.html#run-a-command-line-tool
+
+
 ## 使用C++11的thread库
 ### 方法一
 ```cmake
@@ -163,3 +170,28 @@ e.g
 cmake -DCMAKE_BUILD_TYPE=Release
 ```
 
+## cmake 中的install目录如何指定
+使用 CMAKE_INSTALL_PREFIX 来指定。
+使用`cmake --install .` 或者是`make install`运行。
+或者是通buidl一起，`cmake --build . --target install`.
+- 方法1-在执行cmake时指定：
+  ```
+  cmake -DCMAKE_INSTALL_PREFIX=<你想要安装的路径>
+  ```
+
+- 方法二-设置CMAKE_INSTALL_PREFIX 变量：
+  ```
+  SET(CMAKE_INSTALL_PREFIX <install_path>) 
+  ```
+要加在 PROJECT(< project_name>) 之后。
+ 
+
+例如：
+在设置完install的安装目录之后，执行install时可以通过DESTINATION直接指定安装目录之下的目录
+```cmake
+set(CMAKE_INSTALL_PREFIX /usr/local)
+install(TARGETS test DESTINATION bin)  #将test安装到/usr/local/bin目录下
+```
+
+## 学习笔记
+https://wangpengcheng.github.io/2019/08/13/learn_cmake/

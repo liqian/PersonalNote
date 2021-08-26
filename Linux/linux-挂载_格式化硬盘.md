@@ -92,3 +92,9 @@ https://www.cnblogs.com/jjzd/p/5634171.html
 	
 	
 	
+# 扩展知识
+- 查看硬盘的文件系统
+`lsblk -f`
+
+`lsblk -l`
+-

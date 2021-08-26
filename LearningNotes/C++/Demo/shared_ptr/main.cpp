@@ -1,6 +1,8 @@
 #include <memory>
 #include <iostream>
 #include <vector>
+#include <map>
+#include <algorithm>
 typedef struct _StructA StructA;
 
 struct _StructA
@@ -43,12 +45,17 @@ public:
 private:
     int i;
 };
+
+bool cmp(const StructA& l, const StructA& r)
+{
+    return l.i < r.i;
+}
 void initVector(std::vector<StructA*>& vecPtr)
 {
     std::shared_ptr<StructA> pA = std::make_shared<StructA>();
     pA->i=0;
     printf("use count:%d\n",pA.use_count());
-    vecPtr.push_back(pA.get());//这种方式存在问题，pA智能指针的引用计数不会+1，导致本函数结束后会失败pA的内存。
+    vecPtr.push_back(pA.get());//这种方式存在问题，pA智能指针的引用计数不会+1，导致本函数结束后会释放pA的内存。
 
     pA->i=1;
     printf("use count:%d\n",pA.use_count());
@@ -117,7 +124,7 @@ void main(){
     printf("----- end ----- \n");
     
     Const2NonConst();
-*/
+
     //Conver2ParentClass();
 
     const int* p0 = new int(0);
@@ -136,5 +143,67 @@ void main(){
     *p0 = 200;//指针指向区域为const，不能修改，编译出错
     *p1 = 200;//指针指向区域为const，不能修改，编译出错
     p2 = p1;//指针为const，不能修改，编译出错。
+
+    */
+
+    std::shared_ptr<StructA> p(new StructA());
+    p->i = 1;
+    std::cout << p.use_count() << std::endl;
+
+    std::shared_ptr<StructA> p1 = p;
+    std::cout << p.use_count() << std::endl;
+
+    p1.reset();
+
+    std::cout << p.use_count() << std::endl;
+
+    StructA& i = *p;
+    std::cout << p.use_count() << std::endl;
+
+    std::vector<StructA*> v;
+    v.push_back(p.get());
+
+    p.reset();
+
+    {
+        std::pair<int, int> a;
+        a = std::make_pair<int, int>(1, 0);
+
+        int first = 1;
+        int second = 0;
+        //a= std::make_pair<int, int>(first, second);//无法将参数 1 从“int”转换为“_Ty1 &&”
+
+    }
+    
+
+    {
+        std::pair<std::string, int> b;
+        b = std::make_pair<std::string, int>("key", 0);
+        
+        std::string first = "1";
+        int second = 0;
+        //b = std::make_pair<std::string, int>(first, second);// 无法将参数 1 从“std::string”转换为“_Ty1 &&”
+    }
+    
+
+    {
+        std::pair<bool, int> b;
+        b = std::make_pair<bool, int>(true, 0);
+
+        bool isB = false;
+        //b = std::make_pair<bool, int>(isB, 0);//无法将参数 1 从“bool”转换为“_Ty1 &&”
+
+       
+    }
+
+    {
+        StructA as;
+        std::pair<StructA, int> b;
+        //b = std::make_pair<StructA, int>(as, 0);//编译出错： 无法将参数 1 从“StructA”转换为“_Ty1 &&”  
+        b = std::make_pair<StructA, int>(std::move(as), 0);//使用std::move转成右值引用
+    }
+
+    std::vector<StructA> a;
+    stable_sort(a.begin(), a.end(), cmp);
     return ;
 }

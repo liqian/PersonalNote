@@ -37,4 +37,44 @@ If you don’t want to use sudo when you use the docker command, create a Unix g
     docker ps    #测试docker命令是否可以使用sudo正常使用
     ```
 
-    # JFrog 搭建一个docker自己的源
+# JFrog 搭建一个docker自己的源
+
+# Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+
+# 解决docker使用sudo的问题
+docker命令需要添加`sudo`执行。
+
+去掉`sudo`两种方式：
+- 使用root登录。`su`命令
+- 当前用户添加到docker group中。
+
+## add user to dokcer group on linux
+1. 查看会否有docker group组
+```
+grep docker /etc/group
+```
+
+如果存在会显示：
+```
+docker:x:999
+```
+
+否则说经不存在docker group,需要添加：
+```
+sudo groupadd docker
+```
+
+重启docker服务：
+```
+sudo systemclt restart docker
+```
+
+2. add user_name to docer group using the `usermod`command.
+```
+usermod -aG docker $user_name
+
+usermode -aG docker liqian
+````
+
+
+
