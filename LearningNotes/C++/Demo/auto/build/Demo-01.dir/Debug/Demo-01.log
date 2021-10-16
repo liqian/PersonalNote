@@ -1,0 +1,3 @@
+﻿  main.cpp
+D:\FirefoxDownload\MarkDownNote\PersonalNote\LearningNotes\C++\Demo\auto\main.cpp(66): warning C4172: 返回局部变量或临时变量的地址
+  Demo-01.vcxproj -> D:\FirefoxDownload\MarkDownNote\PersonalNote\LearningNotes\C++\Demo\auto\build\Debug\Demo-01.exe

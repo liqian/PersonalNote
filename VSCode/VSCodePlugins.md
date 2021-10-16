@@ -59,7 +59,15 @@ To verify that the agent is running and is reachable from VS Code's environment,
 
 # C++
 - Cmake/Cmake Tool 如果没有必要，不推荐使用，太耗性能了
-
+- C++ Intellisense
+- C/C++
+- koroFileHeader
+    自动生成文件头部注释和函数注释的插件。
+    
 # Java
 ## Maven for Java
 - 自动刷新工程和编译，导致机器卡
+
+# shell
+- shellman 
+    linux下写shell脚本的辅助工具

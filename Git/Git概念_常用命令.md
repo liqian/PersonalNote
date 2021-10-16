@@ -91,7 +91,9 @@
     git config --global core.editor vim
 
 ## git submodule组合初始化更新 递归
-    gir submodue add rul path/name
+    git submodule add url path/name
+    git submodule add -b <branch> <url> <path>
+    
     git submodule update --progress --init --recursive
     
 ## git rm 删除文件
