@@ -16,7 +16,7 @@ docker run -d -p 5000:5000 --restart always --name registry registry:2.7.1
 ```
 
 ```
-docker run -d -p 5000:5000 --restart always --name registry -v ~/DockerRepositocy:/var/lib/registry registry:2.7.1
+docker run -d -p 5000:5000 --restart always --name registry -v ~/DockerRepository:/var/lib/registry registry:2.7.1
 ```
 
 3. 测试registry
@@ -123,7 +123,7 @@ curl 192.168.2.155:5000/v2/<images_name>/tags/list
 
 e.g
 ```
-curl 192.168.2.155:5000/v2/liqian/ubuntu/tags/list
+curl 192.168.2.155:5000/v2/dockerhub/ubuntu/tags/list
 ```
 
 返回结果：
@@ -196,7 +196,6 @@ docker registry garbage-collect /etc/docker/registry/config.yml
 
 ## DockerRegistry中的`registry`命令的使用
 
-# Docker Registry WebUI
-- DockerUI
-- Shipyard
+# Docker Registry : Habor
+- https://www.cnblogs.com/wxwgk/p/13287336.html
 

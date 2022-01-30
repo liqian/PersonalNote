@@ -3,7 +3,7 @@
 安装目录下：
 删除BCUnRar.dll
 
-删除C:\Users\Administrator\AppData\Roaming\Scooter Software\Beyond Compare 4 下面所有东西。
+删除 C:\Users\Administrator\AppData\Roaming\Scooter Software\Beyond Compare 4 下面所有东西。
 
 
 ## Ubuntu

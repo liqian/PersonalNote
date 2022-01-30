@@ -4,3 +4,8 @@ target
 *.iml
 settings.xml
 launch.json
+build
+PCL-1.12.0-AllInOne-msvc2019-win64.exe
+pcl-1.12.0-pdb-msvc2019-win64.zip
+opencv-3.4.16-vc14_vc15.exe
+opencv-4.5.5-vc14_vc15.exe

@@ -9,21 +9,26 @@ class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) 
     {
-        vector<int> res;
-        for(size_t i=0; i < nums.size();++i){
-            for (size_t j = i+1; j < nums.size(); ++j)
+        int num_len=nums.size();
+        int half = target/2;
+        for(int i=0; i < num_len;++i){
+            for (int j = i+1; j < num_len; ++j)
             {
+                if( (nums.at(i) < half && nums.at(j) < half) ||
+                    (nums.at(i) > half && nums.at(j) > half)
+                )
+                {
+                    continue;
+                }
                 /* code */
                 if(nums.at(i)+nums.at(j)==target)
                 {
-                    res.push_back(i);
-                    res.push_back(j);
-                    break;
+                    return {i,j};
                 }
             }
             
         }
-        return res;
+        return {};
     }
 };
 // @lc code=end

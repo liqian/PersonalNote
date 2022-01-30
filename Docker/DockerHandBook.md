@@ -23,7 +23,7 @@
 - [Docker 发布版本历史](https://docs.docker.com/release-notes/)
 - [Docker 常见问题](https://docs.docker.com/engine/faq/)
 - [Docker 远端应用 API](https://docs.docker.com/develop/sdk/)
-
+- [Docker技术入门与实战  第3版] 是不错的入门数据。（第二章安装部分，最好参考官网，时间有点老了）
 ## Docker 国内镜像
 - 阿里云的加速器：https://help.aliyun.com/document_detail/60750.html
 - 网易加速器：http://hub-mirror.c.163.com

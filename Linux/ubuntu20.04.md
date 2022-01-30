@@ -28,3 +28,5 @@ sogouIme-configtool
 ```bash
 gnome-session-quit --force
 ```
+
+## 更换国内软件镜像

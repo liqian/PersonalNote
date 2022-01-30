@@ -82,6 +82,8 @@ docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
     ```
 6. -p 参数可以多次使用，映射多个端口
     docker run -itd -p 3000:2700 -p 2389:8863 --name nginx_3 nginx:latest
+7. 如果在windows下使用 -v 需要在[setting]中设置下，把需要共享的目录添加上。 D:\tt 写成 /D/tt
+
 ### start/stop/restart
 docker start :启动一个或多个已经被停止的容器
 

@@ -114,3 +114,22 @@ TAR.BZ2
 `du -h --max-depth=1`  只显示当前文件夹的大小
 # 查看各个硬盘大小以及挂载情况
 `df -h`
+
+# Linux tee命令
+Linux tee命令用于读取标准输入的数据，并将其内容输出成文件。
+
+tee指令会从标准输入设备读取数据，将其内容输出到标准输出设备，同时保存成文件。
+
+## 语法
+tee [-ai][--help][--version][文件...]
+
+## 参数：
+-a或--append 　附加到既有文件的后面，而非覆盖它．
+-i或--ignore-interrupts 　忽略中断信号。
+--help 　在线帮助。
+--version 　显示版本信息。
+
+## 例子
+```shell
+ls|tee q.txt
+```

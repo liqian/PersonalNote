@@ -15,7 +15,10 @@
     sudo apt install openssh-server -y
     sudo service ssh start
 ```
-
+## vim
+```bash
+    sudo apt install vim -y
+```
 ## git
 ```shell
     sudo apt install git -y
@@ -26,14 +29,8 @@
 ```shell
     sudo apt install gcc g++ gdb -y
 ```
-## docker
 
-## auto install
-- git 库管理安装脚本
-- JFrog存储本地安装包
-- 如有特殊情况，如下进行说明。
-
-### OpenGL
+## OpenGL
 OpenGL 有好几种安装办法：下面列出二种，GLUT 和 GLFW
 GLUT 方法:
 ```shell
@@ -61,3 +58,18 @@ sudo apt-get install libglut-dev
 ```
 sudo apt-get install freeglut3-dev
 ```
+
+## Cmake 
+- 可以使用系统
+```
+sudo apt install cmake
+```
+- 也可以使用压缩包进行安装
+
+
+## docker
+
+# auto install
+- git 库管理安装脚本
+- JFrog存储本地安装包
+- 如有特殊情况，如下进行说明。
