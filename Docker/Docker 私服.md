@@ -194,6 +194,17 @@ docker registry garbage-collect /etc/docker/registry/config.yml
 ```
 * 删除tag
 
+## 私有仓库 TLS https问题
+Docker默认只信任 TLS 加密的仓库地址，所有非 https 仓库默认无法登陆也无法拉取镜像。
+`/etc/docker/daemon.json`.
+
+`insecure-registries` 字面意思为不安全的仓库，通过添加这个参数对非 https 仓库进行授信。可以设置多个 `insecure-registries` 地址，以数组形式书写，地址不能添加协议头 http。
+```json
+{
+ "insecure-registries": ["<IP>:<PORT>","<IP>:<PORT>"] 
+}
+```
+
 ## DockerRegistry中的`registry`命令的使用
 
 # Docker Registry : Habor

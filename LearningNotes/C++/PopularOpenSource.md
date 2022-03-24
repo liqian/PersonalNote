@@ -1,4 +1,15 @@
 
+# 入门比较不错库
+- gcc
+- MyTinySTL
+- JSON
+- JOSN11
+- muduo
+
+---
+
+# 开发库
+- [A list of open source C++ libraries](https://en.cppreference.com/w/cpp/links/libs)
 ## SQLite
 
 ## Redis
@@ -29,6 +40,11 @@
 - 压缩编码比较丰富
 - fdcache blockcache,存储格式的iterator模式等
 - [LevelDB源码阅读&代码注释版](https://github.com/SmartKeyerror/reading-source-code-of-leveldb-1.23)
+
+## gcc
+- https://github.com/gcc-mirror/gcc
+
+
 ## MyTinySTL
 - 用C++11 重新复写了一个小型STL（容器库+算法库）。
 - 代码结构清晰规范，包含中文文档和注释，并且自带一个简单的测试框架，非常适合新手学习。
@@ -53,7 +69,7 @@
 - 一个基于Boost库实现的现代C++高并发网络库，陈硕 大神编写
 - 其核心代码不超过4500行，使用non-blocking IO(IO Multiplexing) + one loop per thread模型。
 - 适合于linux下多线程服务端应用程序。
-
+- <<Linux多线程服务端编程>>  陈硕写的
 ## CppNet
 - 一个封装在TCP协议上的Procator模式multithread网络库。
 - 包含OS接口调用，回调处理，定时器，缓存管理等。
@@ -79,6 +95,13 @@
 - cJSON也存在几个弱点，虽然功能不是非常强大，但cJSON的小身板和速度是最值得赞赏的。
 - 其代码被非常好地维护着，结构也简单易懂，可以作为一个非常好的C语言项目进行学习。
 - 
+## JSON
+- 当前比较流行的JSON库
+- https://github.com/nlohmann/json 
+
+## JSON11
+- 简易的实现
+- https://github.com/dropbox/json11
 
 ## Libevent
 - [Libevent GitHub](https://github.com/libevent/libevent)

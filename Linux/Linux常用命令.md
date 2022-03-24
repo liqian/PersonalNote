@@ -109,11 +109,7 @@ TAR.BZ2
 上面这个解包命令将会将文档解开在当前目录下面。当然，你也可以用这个命令来捏住解包的路径：
 # tar -jxvf archive_name.tar.bz2 -C /tmp/extract_here/
 
-# 查看文件夹大小
-`du -h` 见所有文件和文件夹大小显示处理
-`du -h --max-depth=1`  只显示当前文件夹的大小
-# 查看各个硬盘大小以及挂载情况
-`df -h`
+
 
 # Linux tee命令
 Linux tee命令用于读取标准输入的数据，并将其内容输出成文件。

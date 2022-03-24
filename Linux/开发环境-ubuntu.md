@@ -30,6 +30,25 @@
     sudo apt install gcc g++ gdb -y
 ```
 
+## x-terminator-emulator 终端分屏工具
+1. 安装 x-terminator-emulator
+```
+    sudo apt install terminator -y
+```
+
+2. 切换回自带的终端
+
+对于Ubuntu系统，如果安装了terminator，那么快捷键Ctrl+Alt+T将不会启动自带的terminal，而是启动安装的terminator。
+
+如果想恢复回来，可以执行以下命令：
+
+```
+sudo update-alternatives --config x-terminal-emulator
+```
+然后选择：
+    gnome-terminal.wrapper
+
+
 ## OpenGL
 OpenGL 有好几种安装办法：下面列出二种，GLUT 和 GLFW
 GLUT 方法:
@@ -65,6 +84,7 @@ sudo apt-get install freeglut3-dev
 sudo apt install cmake
 ```
 - 也可以使用压缩包进行安装
+
 
 
 ## docker

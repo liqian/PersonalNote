@@ -21,7 +21,9 @@ LOAM: Lidar Odometry and Mapping in Real-time（RSS2014），
 > 这里有通过ros进行演示的数据集和操作说明。
 - [loam_continuous](https://wiki.ros.org/loam_continuous)
 > 这里有通过ros进行演示的数据集和操作说明。
-
+- [loam_velodyne](https://wiki.ros.org/loam_velodyne)
+> 数据集。
+> github 代码 : https://github.com/BruceLiqian/loam_velodyne
 - 术语解释
 首先明确二维激光雷达只是水平方向旋转扫描，此时一次水平扫描完成的数据为一次scan；
 
@@ -66,3 +68,6 @@ LOAM: Lidar Odometry and Mapping in Real-time（RSS2014），
 Multiple View Geometry in Computer Vision Second Edition
 Richard Hartley and Andrew Zisserman,
 Cambridge University Press, March 2004.
+
+
+## loam_velodyne 源码和运行

@@ -57,11 +57,17 @@ To verify that the agent is running and is reachable from VS Code's environment,
 - 将上面2个打包下载安装。
 -Extension Packs to add close tag and rename paired tag automatically for HTML/XML
 
+## Markdown
+
+## Markmap
+- Markdown以图形显示的插件
+- Visualize your markdown in VSCode
+
 # C++
 - Cmake/Cmake Tool 如果没有必要，不推荐使用，太耗性能了
 - C++ Intellisense
 - C/C++
-- koroFileHeader
+- koroFileHeader -- Option
     自动生成文件头部注释和函数注释的插件。
     
 # Java

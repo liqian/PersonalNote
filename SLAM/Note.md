@@ -2,6 +2,7 @@
 - 圈子：SLAM知识星球
 - https://github.com/orgs/OpenSLAM/repositories?type=all
 - [awesome-SLAM-list](https://github.com/OpenSLAM/awesome-SLAM-list)
+- [深蓝学院](https://www.shenlanxueyuan.com/orientation/slam)
 # 视觉SLAM
 - 
 ## OpenCV
@@ -48,63 +49,8 @@
 - [g2o学习](https://zhuanlan.zhihu.com/p/121628349)
 - [SLAM激光SLAM初学者代码及论文推荐](https://blog.csdn.net/inf4inf/article/details/108574555)
 - [CSDN 博主关于SLAM算法的分析和源码阅读](https://blog.csdn.net/weixin_42048023?type=blog)
+- [国外的一个图形视觉的课程，资料不错](https://cseweb.ucsd.edu/classes/sp21/cse291-i/)
 
-## 2021年十大最佳开源SLAM算法()
-- TANDEM 
-> 纯视觉SLAM
-> 创新点：
-> 1. 一种新的单目实时稠密SLAM框架，将经典的直接VO和基于学习的MVS重建无缝结合； 
-> 2. 第一个利用全局TSDF模型渲染的深度图，实现单目稠密跟踪前端
-> 3. 一种新的MVS网络，CVA-MVSnet,他能够通过视图聚合和多级深度预测来使用整个关键帧窗口
-
-- MonoRec
-> 纯视觉SLAM
-> 不需要激光雷达， 只需要单目相机，即可在动态环境下，实现半监督稠密重建。
-> 动态重建的难点：如何保证不受移动物体的影响？ 
-> 作者结合了深度MVS和单目深度估计算法，
-> 先使用了MaskModule识别移动像素，降低代价体中相应体素的权重，在利用DepthModule，实现对静态和动态物体进行深度估计。
-> 可以应用于三维重建，用于自动驾驶和AR领域。
-
-- Range-MCL
-> 激光雷达SLAM
-> 可用于自动驾驶汽车的激光雷达的全局定位。
-> 该工作基于蒙特卡罗定位和粒子滤波，来估计移动机器人和自动驾驶汽车的姿态，以实现全局定位。
-> 传感器模型将当前的激光雷达臊面的距离图像和三角网格渲染的合成距离图像，进行比较，更新粒子的权重。
-
-- MULLS
-> 激光雷达SLAM：高效 低漂移 通用的
-> 前端使用双阈值地面滤波和PCA，从每帧中提取地面、柱子等特征，然后用多尺度线性最小二乘ICP算法实现子地图的配准。
-> 对于后端，在存储的历史子图之间进行分层位姿图优化，以减少因航位推算而产生的漂移。
-
-- LiLi-OM
-> 激光雷达惯性SLAM：专门用于固态和机械激光雷达
-> 特点：
-> 1. 针对Livox Horizon的不规则扫描模式量身定做了新的特征提取方法
-> 2. 前端为基于特征的轻量级激光雷达里程计，采用自适应的关键帧选择，提供快速的运动估计。
-> 3. 后端采用基于关键帧的分层滑动窗口优化，直接融合IMU和LiDAR测量数据。
-
-- FAST-LIO2
-> 激光雷达惯性SLAM
-> 可用于自动驾驶、无人机、快速移动的手持设备等场景。
-> 特点：
-> 1. 计算效率高，在大型室外环境中帧率能达到100Hz
-> 2. 鲁棒性高，在旋转速度高达1000度/秒的杂乱室内环境中进行可靠的姿态估计。
-> 3. 通用性好，适用于多线旋转和固态激光雷达、无人机和手持平台。
-> 4. 精度高
-
-- R3LIVE
-> 多传感器融合SLAM:开源视觉+激光+惯性的多传感器融合SLAM系统
-
-- GVINS
-> 多传感器融合SLAM：GNSS-视觉-惯性融合的SLAM系统
-
-- LVI-SAM
-> 多传感器融合SLAM：视觉+激光+惯性
-
-- DSP-SLAM
-> 语义SLAM
-
-- 来源(https://appafc4omci9700.h5.xiaoeknow.com/v1/course/column/p_61cc350be4b0a91144afd6ab?app_id=appafc4omci9700&entry=2&entry_type=2001&payment_type=&product_id=p_61cc350be4b0a91144afd6ab&resource_id=&resource_type=6&scene=%E5%88%86%E4%BA%AB&share_type=5&share_user_id=u_61ea035b79b55_4jA90l3j0l&type=3)
 
 ## 图像处理算法库
 - OpenCV -- 开源
@@ -114,3 +60,24 @@
 - 机器人学
 - 计算机图形学
 
+## 坐标系
+1. 全局坐标系Global frame
+
+该坐标系为世界坐标系，其他各传感器之间的坐标变换都可用该坐标系作为参考。该坐标系的z轴指向天空，x轴指向正东方，y轴指向北极。
+
+2. 车身坐标系Vehicle frame
+
+该坐标系随车的位置变化而变化，可以看作车的自我坐标系(ego)，它的x轴指向车的正前方，y轴指向车的左边，z轴指向天空。（车的姿态矩阵pose定义为vehicle frame到global frame的变换矩阵）
+
+3. 传感器坐标系Sensor frame
+
+可以看作传感器的自我坐标系(ego)。它的x轴指向传感器的正前方，y轴指向传感器的左边，z轴指向天空。（它的位姿定义为sensor frame到vehicle frame的转移矩阵，可以看作传感器到车身的外参）
+
+4. 图像坐标系Image frame
+
+与上面的坐标系不同，此处是2D坐标系，它的横坐标x长度是width，纵坐标y的长度是height。原点是图像的左上角。(由sensor frame到image frame是内参)
+
+5. 雷达球形坐标系LiDAR Spherical coordinate system
+
+该坐标系和其他几个3D检测数据集的坐标系很不一样，它把一个LiDAR坐标(x,y,z)转换成球坐标系下的(range长度，azimuth左右方位角，inclination上下方位角)
+![](lidar_coordinate_system.jpg)

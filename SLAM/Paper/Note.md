@@ -4,7 +4,11 @@
 > 参考[如何免费下载IEEE文章](https://blog.csdn.net/weixin_43935696/article/details/109681676)这篇文章。
 
 
-##
+## LOAM相关
+### Fast Segmentation of 3D Point Clouds for Ground Vehicles
+- Author： M. Himmelsbach and Felix v. Hundelshausen and H.-J. Wuensche
+- 地面分割的经典算法，在Lego-Loam 和Loam中都在会用。
+- [整体介绍不错的一篇文章](https://blog.csdn.net/lovelyaiq/article/details/118826534)
 
 ## Others
 ### ICP

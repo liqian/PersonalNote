@@ -6,7 +6,8 @@
 - Windos Linux Mac
 - 目前系统默认支持Orcale MySQL ，java的代码自动生成。 其他类型的数据库或者语言，需要自己添加相应设置和代码dot模板。
 - 一键自动生成Markdown以及HTML格式的表结构文档。
-
+## PowerDesgin & chiner
+https://mp.weixin.qq.com/s/AYrNI-HetnpxlnUkiBPn3w
 
 # 几种常用数据库对比和简介
 

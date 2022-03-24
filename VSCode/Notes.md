@@ -7,7 +7,8 @@ C:\Users\Administrator\AppData\Roaming\Code\User\workspaceStorage
 - workspaceStorage：平时打开工程的缓存文件，也可以删除。
 ## AppData\Local\Temp
 C:\Users\liqian\AppData\Local\Temp
-
+## VS安装时的下载缓存，可以删除，只是重新安装时会再次下载而已
+C:\ProgramData\Microsoft\VisualStudio\Packages
 # VSCode架构
 - https://zhuanlan.zhihu.com/p/96041706
 
