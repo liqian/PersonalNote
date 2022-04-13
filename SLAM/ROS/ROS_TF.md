@@ -299,3 +299,6 @@ int main(int argc, char** argv){
   return 0;
 };    
 ```
+
+## 其他坐标系 轴不同，需要转换 
+Unity Direct3D使用左手坐标系，既笛卡尔坐标系的X轴变为Z轴，Y轴变为X轴，Z轴变为Y轴（无需考虑方向）。

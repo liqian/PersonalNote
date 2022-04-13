@@ -16,6 +16,10 @@
 ## 图优化库G2o
 ## 非线性优化库Ceres
 ## 云库PCL [Point Cloud Library.md]
+##  isam
+## gtsam
+
+
 
 # 激光SLAM
 - [激光雷达SLAM算法大全 知乎文章--不错](https://www.zhihu.com/column/c_1220713322028761088)
@@ -81,3 +85,7 @@
 
 该坐标系和其他几个3D检测数据集的坐标系很不一样，它把一个LiDAR坐标(x,y,z)转换成球坐标系下的(range长度，azimuth左右方位角，inclination上下方位角)
 ![](lidar_coordinate_system.jpg)
+
+# 多传感器融合
+## 卡尔曼滤波
+- 高效率的递归滤波器

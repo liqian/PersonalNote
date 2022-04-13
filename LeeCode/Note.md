@@ -1,3 +1,91 @@
 # 中国站
 https://leetcode-cn.com/
 
+# 面试高频题
+- Hard会一些高频就可以，主攻Medium,反复做，略加思考回忆就可以写出，Easy的一秒钟不卡就可以写出。
+- 需要锻炼自己写测试用例，要注意练习。
+## Hard 15道
+- [25. K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)
+- [23. 合并K个升序链表](https://leetcode-cn.com/problems/merge-k-sorted-lists/)
+- [42. 接雨水](https://leetcode-cn.com/problems/trapping-rain-water/)
+- [124. 二叉树中的最大路径和](https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/)
+- [72. 编辑距离](https://leetcode-cn.com/problems/edit-distance/)
+- [4. 寻找两个正序数组的中位数](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)
+- [76. 最小覆盖子串](https://leetcode-cn.com/problems/minimum-window-substring/)
+- [239. 滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum/)
+- [41. 缺失的第一个正数](https://leetcode-cn.com/problems/first-missing-positive/)
+- [32. 最长有效括号](https://leetcode-cn.com/problems/longest-valid-parentheses/)
+- [297. 二叉树的序列化和反序列化](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/)
+- [460. LFU缓存](https://leetcode-cn.com/problems/lfu-cache/)
+- [剑指 Offer 51. 数组中的逆序对](https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/)
+- [224. 基本计算器](https://leetcode-cn.com/problems/basic-calculator/)
+- [135. 分发糖果](https://leetcode-cn.com/problems/candy/)
+
+## Medium 67道
+- [3. 无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)
+- [146. LRU缓存](https://leetcode-cn.com/problems/lru-cache/)
+- [215. 数组中的第K个最大元素]
+- [15. 三树之和](https://leetcode-cn.com/problems/3sum/)
+- [102. 二叉树的层序遍历]
+- [103. 二叉树的锯齿形层次遍历]
+- [236. 二叉树的最近公共祖先]
+- [33. 搜索旋转排序数组]
+- [5. 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)
+- [200. 岛屿数量]
+- [46. 全排列]
+- [92. 反转链表II]
+- [142. 环形链表II]
+- [54. 螺旋矩阵]
+- [300. 最长上升子序列]
+- [143. 重排链表]
+- [199. 二叉树的右视图]
+- [56. 合并区间]
+- [19. 删除链表的倒数第N个节点]
+- [82. 删除排序链表中的重复元素II]
+- [8. 字符串转换整数 (atoi)](https://leetcode-cn.com/problems/string-to-integer-atoi/)
+- [148. 排序链表]
+- [2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
+- [151. 翻转字符串里的单词]
+- [93. 复原IP地址]
+- [105. 从前序与中序遍历序列构造二叉树]
+- [31. 下一个排列]
+- [1143. 最长公共子序列]
+- [22. 括号生成]
+- [129. 求根到叶子节点数字之和]
+- [113. 路径总和II]
+- [98. 验证二叉搜索树]
+- [43. 字符串相乘]
+- [78. 子集]
+- [470. 用Rand7()实现Rand10()]
+- [322. 零钱兑换]
+- [64. 最小路径和]
+- [718. 最长重复子数组]
+- [48. 旋转图像]
+- [165. 比较版本号]
+- [39. 组合总和]
+- [34. 在排序数组中查找元素的第一个和最后一个位置]
+- [153. 寻找旋转排序数组中的最小值]
+- [62. 不同路径]
+- [128. 最长连续序列]
+- [221. 最大正方形]
+- [240. 搜索二维矩阵II]
+- [24. 两两交换链表中的节点]
+- [695. 岛屿的最大面积]
+- [198. 打家劫舍]
+- [498. 对角线遍历]
+- [662. 二叉树最大宽度]
+- [79. 单词搜索]
+- [145. 二叉树的后续遍历]
+- [402. 移掉K位数字]
+- [59. 螺旋矩阵II]
+- [230. 二叉搜索树种第K小的元素]
+- [328. 奇偶链表]
+- [61. 旋转链表]
+- [50. Pow(x,y)]
+- [47. 全排列II]
+- [450. 删除二叉搜索树中的节点]
+- [74. 搜索二维矩阵]
+- [189. 旋转数组]
+- [40. 组合总和II]
+- [11. 盛最多水的容器]
+- [114. 二叉树展开为链表]

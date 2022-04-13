@@ -84,3 +84,10 @@ LVI-SAM(LIDAR+单目+IMU+RTK+GPS) https://github.com/TixiaoShan/LVI-SAM
 2. F-LOAM：Fast Lidar Odometry And Mapping
 3. https://github.com/wh200720041/floam
 4. https://zhuanlan.zhihu.com/p/452544259
+
+## 激光语义分割
+
+### SuMa++: Efficient LiDAR-based Semantic SLAM
+- https://github.com/PRBonn/semantic_suma
+- [paper](https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/chen2019iros.pdf)
+- (./Paper/Others/LidarSematic/SuMa++  Efficient LiDAR-based Semantic SLAM.pdf)

@@ -22,11 +22,13 @@ LeGO-LOAM: Lightweight and Ground-Optimized Lidar Odometry and Mapping on Variab
 - [Github](https://github.com/RobustFieldAutonomyLab/LeGO-LOAM)
 - [How to build&run](LOAM_Build&Run.md)
 
-# 欧拉角
-- 绕x轴 Pitch
-- 绕y轴 Yaw
-- 绕z轴 Roll
+# 基础知识
+- roll： 绕x轴转动
+- yaw : 绕z轴转动
+- pitch ： 绕y轴转动
+![](./asset/Lego_loam_Celodyne.png)
 
+- [用到的数学公式详解](https://wykxwyc.github.io/2019/08/01/The-Math-Formula-in-LeGO-LOAM/)
 
 # 算法核心
 LeGO-LOAM一共分为4个步骤。
@@ -75,10 +77,19 @@ LeGO-LOAM一共分为4个步骤。
  分析是因为面特征点只用了地面点，而在路口拐弯时，地面点无法准确的进行配准优化。
 
  修改：
- 1. 曲率计算时，/range  使得远方的点曲率相对较小些，会被优先选做地面点。--这部分很重要，也是优化起核心作用的。
+ 1. 曲率计算时，/range  使得远方的点曲率相对较小些，会被优先选做地面点。
  2. 面特征点 允许从非地面点选取
 
  这样使用了部分非地面点作为特征点，进行优化。
+
+修改分割：
+1. 参照【A Fast Segmentation Method of Sparse Point Clouds】
+    >The Euclidean distance between adjacent data points belonging to the same object is almost equal to the arc length formed by the short side. 
+    > D=K * L * alpha  其实就是一个求弧长，弧长跟长度差。 D:是两条边的长度差 K: 是一个阈值   L： short side  alpha: 两条线的夹角
+    > 两条边分别：d1 d2 角度是：angle1 angle2 单位是度
+    > D=abs(d1-d2)  L=std:min(d1,d2) K=0.8 alpha = abs(angle1-angle2)*PI/180.0 
+--这部分很重要，也是优化起核心作用的。
+
 # 运行评测Blog
 - https://blog.csdn.net/NEU_Ocean/article/details/116834590
 # 问题
